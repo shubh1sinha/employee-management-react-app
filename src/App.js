@@ -9,6 +9,7 @@ import Dashboard from './FrontEnd/Dashboard';
 import EmployeeInfo from './FrontEnd/EmployeeInfo';
 import UpdateEmployee from './FrontEnd/UpdateEmployee';
 import EmployeeList from './FrontEnd/EmployeeList';
+import AdminRegister from './FrontEnd/AdminRegister';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <Route exact path='/employee/info/:id' element={<EmployeeInfo/>}></Route>
       <Route exact path='/employee/update/:id' element={<UpdateEmployee/>}></Route>
       <Route exact path='/employee/list/:id' element={<EmployeeList/>}></Route>
+      <Route exact path='/admin/register/:id' element={<AdminRegister/>}></Route>
       </Routes>
 </Router>
       

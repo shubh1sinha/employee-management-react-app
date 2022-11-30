@@ -39,7 +39,7 @@ export default function Dashboard() {
                             <li className='list-group-item'>
                             
                             <Link className='btn btn-outline-dark' to={`/employee/list/${id}`} >Employee List</Link> &nbsp;
-                            
+                            <Link className='btn btn-outline-dark' to={`/admin/register/${id}`} >Register Admin</Link> &nbsp;
                             </li>
                           </ul>
                         </div>
