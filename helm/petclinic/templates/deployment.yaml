@@ -8,12 +8,12 @@
      metadata:
        name: emp-management
        labels:
-         app: emp-management
+         app: emp-app
      spec:
        containers:
-         - name: emp-management
+         - name: emp-container
            image: shubh1sinha/employee-management-react:1.0
            imagePullPolicy: Always
    selector:
      matchLabels:
-      app: emp-management
+      app: emp-app

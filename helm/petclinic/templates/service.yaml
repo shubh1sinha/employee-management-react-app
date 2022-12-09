@@ -3,10 +3,10 @@ kind: Service
 metadata:
   name: emp-service-management
   labels:
-    app: emp-management
+    app: emp-label
 spec:
   selector:
-    app: emp-management
+    app: emp-app
   type: LoadBalancer
   ports:
   - nodePort: 32752
