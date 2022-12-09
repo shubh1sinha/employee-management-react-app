@@ -7,7 +7,7 @@ pipeline {
                         sh 'cp -R helm/* .'
 		        sh 'ls -ltr'
                         sh 'pwd'
-                        sh '/usr/local/bin/helm upgrade --install emp-management petclinic'
+                        sh '/usr/local/bin/helm upgrade --install petclinic emp-management'
               			
             }           
         }
