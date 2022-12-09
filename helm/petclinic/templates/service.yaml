@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: emp-service-management
   labels:
-    app: emp-label
+    app: emp-app
 spec:
   selector:
     app: emp-app
