@@ -1,0 +1,16 @@
+# Service - LoadBalancer
+# # pb-service -lb.yml
+apiVersion: v1
+kind: Service
+metadata:
+  name: employee-management-service
+  labels:
+    app: emp-app
+spec:
+  selector:
+    app: emp-app
+  type: LoadBalancer
+  ports:
+  - nodePort: 32751
+    port: 3001
+    targetPort: 3001
