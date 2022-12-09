@@ -1,39 +1,17 @@
-#Deployment
-###controllers/pb-deploy.tml
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: employee-management-deployment
-spec:
-  replicas: 1
-  strategy:
-    type: RollingUpdate
-    rollingUpdate:
-  minReadySeconds: 5
-  revisionHistoryLimit: 10
-  selector:
-    matchLabels:
-      app: employee-management
-  template:
-    metadata:
-      labels:
-        app: employee-management
-    spec:
-      containers:
-      - name: emp-container
-        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-        imagePullPolicy: Always
-        resources:
-          limits:
-            cpu: '1'
-            memory: '1G'
-          requests:
-            cpu: '1'
-            memory: '1G'
-        ports:
-        - containerPort: 3001
-      imagePullSecrets:
-      - name: regcred
-
-
-
+ metadata:
+   name: emp-deployment-management
+ spec:
+   replicas: 2
+   template:
+     metadata:
+       name: emp-management
+       labels:
+         app: emp-management
+     spec:
+       containers:
+         - name: emp-management
+           image: shubh1sinha/employee-management-react:1.0
+           imagePullPolicy: Always
+   selector:
+     matchLabels:
+      app: emp-management
