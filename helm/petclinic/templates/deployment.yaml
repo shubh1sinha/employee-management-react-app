@@ -3,7 +3,7 @@
  metadata:
    labels:
      app: emp-app
-   name: emp-deployment-management
+     name: emp-deployment-management
  spec:
    replicas: 2
    template:
