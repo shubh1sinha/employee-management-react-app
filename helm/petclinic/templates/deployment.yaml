@@ -1,22 +1,19 @@
- apiVersion: apps/v1
- kind: Deployment
- metadata:
-   name: emp-deployment-management
-   labels:
-     app: emp-app
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: emp-deployment-management
    
- spec:
-   replicas: 1
-   template:
-     metadata:
-       name: emp-management
-       labels:
-         app: emp-app
-     spec:
-       containers:
-         - name: emp-container
-           image: shubh1sinha/employee-management-react:1.0
-           imagePullPolicy: Always
-   selector:
-     matchLabels:
-      app: emp-app
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: emp-management
+      labels:
+        app: emp-app
+    spec:
+      containers:
+        - name: emp-container
+          image: shubh1sinha/employee-management-react:1.0
+  selector:
+    matchLabels:
+     app: emp-app
