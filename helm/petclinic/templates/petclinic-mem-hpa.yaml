@@ -1,4 +1,4 @@
-apiVersion: autoscaling/v2
+apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
   name: order-mem-hpa
@@ -6,13 +6,7 @@ spec:
   maxReplicas: 5
   minReplicas: 1
   scaleTargetRef:
-    apiVersion: apps/v2
+    apiVersion: apps/v1
     kind: Deployment
     name: emp-deployment-management
-  metrics:
-  - type: Resource
-    resource:
-      name: memory
-      target:
-       type: Utilization
-       averageUtilization: 100
+  targetCPUUtilizationPercentage: 100
