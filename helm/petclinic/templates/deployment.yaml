@@ -14,6 +14,14 @@ spec:
       containers:
         - name: emp-container
           image: shubh1sinha/employee-management-react:1.0
+          imagePullPolicy: Always
+          resources:
+            limits:
+              cpu: '1'
+              memory: '500mi'
+            requests:
+              cpu: '1'
+              memory: '500mi'
   selector:
     matchLabels:
      app: emp-app
