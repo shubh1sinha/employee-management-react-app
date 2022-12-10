@@ -18,10 +18,10 @@ spec:
           resources:
             limits:
               cpu: '1'
-              memory: "345Mi"
+              memory: "900Mi"
             requests:
               cpu: '1'
-              memory: "345Mi"
+              memory: "900Mi"
   selector:
     matchLabels:
      app: emp-app
