@@ -1,11 +1,12 @@
  apiVersion: apps/v1
  kind: Deployment
  metadata:
+   name: emp-deployment-management
    labels:
      app: emp-app
-     name: emp-deployment-management
+   
  spec:
-   replicas: 2
+   replicas: 1
    template:
      metadata:
        name: emp-management
