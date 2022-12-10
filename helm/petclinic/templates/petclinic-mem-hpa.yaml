@@ -6,7 +6,7 @@ spec:
   maxReplicas: 5
   minReplicas: 1
   scaleTargetRef:
-    apiVersion: apps/v1
+    apiVersion: apps/v2
     kind: Deployment
     name: emp-deployment-management
   metrics:
