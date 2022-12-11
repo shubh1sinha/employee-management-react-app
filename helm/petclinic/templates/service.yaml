@@ -9,6 +9,6 @@ spec:
     app: emp-app
   type: LoadBalancer
   ports:
-  - nodePort: 32751
+  - nodePort: 32752
     port: 80
     targetPort: 3000
