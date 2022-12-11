@@ -17,11 +17,9 @@ spec:
           imagePullPolicy: Always
           resources:
             limits:
-              cpu: '3m'
-              memory: '1G'
+              cpu: '100m'
             requests:
               cpu: '1m'
-              memory: '500Mi'
   selector:
     matchLabels:
      app: emp-app
